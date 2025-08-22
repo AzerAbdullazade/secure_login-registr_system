@@ -1,0 +1,165 @@
+/* 🖋 Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🖋 Container */
+.container {
+    width: 90%;
+    max-width: 420px;
+    padding: 35px 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* 🖋 Form Başlıqları */
+.container h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.container h2:hover {
+    transform: scale(1.07);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Fərqli container-lar üçün gradient */
+.container.register h2 {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+.container.login h2 {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+/* 🖋 Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 14px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 12px rgba(106, 17, 203, 0.2);
+    outline: none;
+}
+
+/* 🖋 Buttons */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* 🖋 Alert mesajları */
+.alert {
+    padding: 14px 16px;
+    margin: 14px 0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+.alert-danger {
+    background-color: #fde2e2;
+    color: #a71d2a;
+    border: 1px solid #f5c2c7;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-warning {
+    background-color: #fff4e5;
+    color: #7a5e00;
+    border: 1px solid #ffeeba;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* 🖋 Links */
+a {
+    color: #6a11cb;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2575fc;
+    text-decoration: underline;
+}
+
+/* 🖋 Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .container h2 {
+        font-size: 1.9rem;
+    }
+}
+

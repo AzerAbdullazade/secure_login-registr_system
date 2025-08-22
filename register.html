@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Qeydiyyat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Qeydiyyat</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="POST" action="/register">
+            {{ form.hidden_tag() }} 
+            {{ form.username.label }}<br>
+            {{ form.username() }}<br>
+            
+            {{ form.email.label }}<br>
+            {{ form.email() }}<br>
+            
+            {{ form.password.label }}<br>
+            {{ form.password() }}<br>
+            
+            {{ form.confirm_password.label }}<br>
+            {{ form.confirm_password() }}<br>
+            
+            {{ form.submit() }}
+        </form>
+    </div>
+</body>
+</html>
